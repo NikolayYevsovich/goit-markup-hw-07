@@ -73,18 +73,18 @@ img {
   padding-bottom: 0px;
 }
 /* Лого */
-.logo-primary,
-.logo-secondary {
+.logo__first-part,
+.logo__second-part {
   font-family: var(--secondary-font);
   font-weight: bold;
   font-size: 26px;
   line-height: 1.19;
   color: #000000;
 }
-.header-logo {
+.logo {
   text-decoration: none;
 }
-.logo-primary {
+.logo__first-part {
   color: var(--accent-color);
 }
 
@@ -96,25 +96,25 @@ img {
   padding-bottom: 0px;
 }
 
-.nav-main {
+.header__nav-wrapper {
   display: flex;
   align-items: center;
 }
 
-.nav-list {
+.nav__list {
   display: flex;
   margin-left: 93px;
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.nav-link:not(:last-child) {
+.nav__item:not(:last-child) {
   margin-right: 50px;
 }
 
-.nav-link {
+.nav__item {
   list-style-type: none;
 }
-.nav-link-txt {
+.nav__link {
   font-family: var(--main-font);
   font-weight: 500;
   font-size: 14px;
@@ -128,12 +128,12 @@ img {
   transition: color var(--anim-fast);
   position: relative;
 }
-.nav-link-txt:focus,
-.nav-link-txt:hover {
+.nav__link:focus,
+.nav__link:hover {
   color: var(--accent-color);
 }
 
-.current::after {
+.nav__link--active::after {
   content: '';
   position: absolute;
   bottom: -1px;
@@ -144,7 +144,7 @@ img {
   background-color: var(--accent-color);
   border-radius: 2px;
 }
-.current{
+.nav__link--active{
   color: var(--accent-color);
 }
 
@@ -155,26 +155,23 @@ img {
   align-items: center;
   justify-content: center;
 }
-.header-mail,
-.header-phone {
+.auth-nav__item {
+  list-style-type: none;
+}
+
+.auth-nav__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.auth-nav__mail,
+.auth-nav__phone {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.contacts-icon {
-  margin-right: 10px;
-  fill: var(--secondary-font-color);
-  fill: currentColor;
-}
-.outh-link {
-  list-style-type: none;
-}
-.outh-link:not(:last-child) {
-  margin-right: 50px;
-}
 
-.header-mail,
-.header-phone {
+.auth-nav__mail,
+.auth-nav__phone {
   font-family: var(--main-font);
   font-weight: 500;
   line-height: 1.14;
@@ -183,14 +180,19 @@ img {
   text-decoration: none;
   transition: color var(--anim-fast);
 }
-.header-phone:focus,
-.header-phone:hover,
-.header-mail:hover,
-.header-mail:focus {
+.auth-nav__phone:focus,
+.auth-nav__phone:hover,
+.auth-nav__mail:hover,
+.auth-nav__mail:focus {
   color: var(--accent-color);
   cursor: pointer;
 }
 
+.auth-nav__icon {
+  margin-right: 10px;
+  fill: var(--secondary-font-color);
+  fill: currentColor;
+}
 /* Уникальный контент страницы */
 .hero {
   background-color: var(--secondary-bg-color);
